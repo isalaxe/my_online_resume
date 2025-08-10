@@ -34,6 +34,19 @@ body {
   padding: 2rem;
 }
 
+/* ======= LAYOUT COM FLEXBOX ======= */
+
+.page-header .container {
+  /* PASSO 1: Ativa o modo Flexbox no container do cabeçalho */
+  display: flex;
+
+  /* PASSO 2: Alinha os itens na horizontal, com espaço entre eles */
+  justify-content: space-between;
+
+  /* PASSO 3: Alinha os itens na vertical, para que fiquem centralizados */
+  align-items: center;
+}
+
 header, section, footer {
   background-color: var(--section-bg);
   padding: 2rem;
@@ -428,4 +441,23 @@ body.light-theme summary {
 }
 body.light-theme details[open] summary {
     color: var(--accent-secondary);
+}
+/* ============================ */
+/* ======= RESPONSIVE ======= */
+/* ============================ */
+
+/* Aplica estes estilos em telas com largura máxima de 768px (tablets e celulares) */
+@media (max-width: 768px) {
+
+  /* Faz o container do cabeçalho empilhar os itens verticalmente */
+  .page-header .container {
+    flex-direction: column; /* A MÁGICA ACONTECE AQUI! */
+    gap: 1.5rem; /* Adiciona um espaço vertical entre o texto e o botão */
+  }
+
+  /* Centraliza o texto do cabeçalho no celular para um visual mais limpo */
+  .page-header .container div {
+    text-align: center;
+  }
+
 }
