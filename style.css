@@ -327,23 +327,92 @@ details ul {
   color: var(--text-color);
   font-size: 0.95rem;
 }
-/* ======= LIGHT THEME ======= */
+/* ======= LIGHT THEME (VERSÃO 5.0 - PALETA PERSONALIZADA) ======= */
+
+/* Definimos suas cores personalizadas em variáveis para fácil acesso */
 body.light-theme {
-  background-color: #f5f5f5;
-  color: #1c1c1c;
+  --bg-color: #f0f0f0;                      /* Fundo: Cinza bem claro e neutro */
+  --section-bg: #fafafa;                    /* Fundo dos cartões: "Quase branco" suave */
+  --text-primary: #6A3D21;                  /* SUA ESCOLHA: Marrom escuro para o texto principal */
+  --text-secondary: #C29470;                /* SUA ESCOLHA: Caramelo para textos de lista */
+  --accent-primary: #B2D9C4;                /* SUA ESCOLHA: Verde para botões e destaques */
+  --accent-secondary: #cc7fb5;              /* SUA ESCOLHA: Rosa para ícones e links */
+  --shadow-color: rgba(0, 0, 0, 0.08);      /* Sombra suave */
+  --border-color: #e0e0e0;                  /* Borda sutil */
 }
 
+/* Aplica as cores de fundo e texto */
+body.light-theme {
+  background-color: var(--bg-color);
+  color: var(--text-primary);
+}
+
+/* Estiliza os "cartões" (seções, cabeçalho, rodapé) */
 body.light-theme header,
 body.light-theme section,
 body.light-theme footer {
-  background-color: #ffffff;
-  color: #1c1c1c;
-  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+  background-color: var(--section-bg);
+  box-shadow: 0 4px 12px var(--shadow-color);
+  border: 1px solid var(--border-color);
 }
 
+/* Blocos internos (clientes, etc.) */
+body.light-theme .client-block,
+body.light-theme details {
+  background-color: transparent;
+  border: 1px solid var(--border-color);
+  box-shadow: none;
+}
+body.light-theme details[open] {
+  background-color: var(--bg-color);
+}
+
+/* Títulos com máxima legibilidade */
 body.light-theme h1,
 body.light-theme h2,
 body.light-theme h3,
 body.light-theme h4 {
-  color: #2b211c;
+  color: var(--text-primary);
+  text-shadow: none;
+}
+
+/* CORREÇÃO DE LEGIBILIDADE: Texto das listas com a cor caramelo */
+body.light-theme ul {
+    color: var(--text-secondary);
+}
+
+/* BOTÕES com a cor verde */
+body.light-theme button {
+    background: var(--accent-primary);
+    color: var(--text-primary); /* Texto do botão com a cor marrom escuro para contraste */
+    font-weight: 600; /* Um pouco mais de peso na fonte */
+}
+body.light-theme button:hover {
+    background: #9fcbad; /* Um tom de verde um pouco mais escuro para o hover */
+}
+
+/* ÍCONES e LINKS com a cor rosa */
+body.light-theme .section-heading i,
+body.light-theme #contact i,
+body.light-theme a {
+    color: var(--accent-secondary);
+    font-weight: 600;
+}
+body.light-theme a:hover {
+    filter: brightness(85%); /* Escurece um pouco a cor no hover */
+}
+
+/* DETALHES FINAIS com as novas cores */
+body.light-theme h2::after {
+  background: linear-gradient(90deg, var(--accent-primary), var(--accent-secondary)); /* Gradiente de Verde para Rosa */
+}
+body.light-theme h3 {
+  border-left: 4px solid var(--accent-primary); /* Borda verde */
+}
+body.light-theme summary {
+    color: var(--accent-primary);
+    font-weight: 600;
+}
+body.light-theme details[open] summary {
+    color: var(--accent-secondary);
 }
