@@ -189,10 +189,21 @@ button:hover {
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-.client-block p {
-  font-weight: 500;
+/* ===== AJUSTE PARA O NOVO HTML DA SEÇÃO DE EXPERIÊNCIA ===== */
+
+.client-block h4 {
+  font-weight: 600; /* Aumentei um pouco o peso para dar mais destaque */
   color: var(--text-color);
+  margin-top: 0;    /* Remove a margem superior que os títulos (h4) têm por padrão */
   margin-bottom: 0.4rem;
+  line-height: 1.4; /* Melhora o espaçamento caso o título quebre em duas linhas */
+}
+
+.client-block h4 small {
+  font-weight: 400;     /* Deixa a fonte da data mais leve que a do título */
+  color: #d6ccc2;        /* Usa uma cor um pouco mais suave para a data */
+  margin-right: 0.5rem; /* Adiciona um pequeno espaço entre a data e o título */
+  display: block;       /* Faz a data ficar em uma linha própria acima do título (opcional, mas fica bom!) */
 }
 
 .client-block ul {
