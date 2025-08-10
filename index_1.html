@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Isa Laxe - Translator & Front-End Learner</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+
+<body>
+
+  <!-- CABEÇALHO (HEADER)
+    A tag <header> é usada para o topo da página, geralmente contendo o título principal e navegação.
+    Colocamos a div.container dentro para manter o conteúdo centralizado. -->
+  <header class="page-header">
+    <div class="container">
+      <h1>Isa Laxe</h1>
+      <p>English > Brazilian Portuguese Professional Translator • Aspiring Front-End Developer</p>
+      <button id="toggle-theme">🌗 Toggle Theme</button>
+    </div>
+  </header>
+
+  <!-- CONTEÚDO PRINCIPAL (MAIN)
+    A tag <main> envolve todo o conteúdo principal da sua página. Isso ajuda leitores de tela e o Google
+    a entenderem qual é a parte mais importante do seu site. -->
+  <main>
+    <div class="container">
+
+      <!-- SEÇÃO: PERFIL DE TRADUTORA
+        Usamos <section> para agrupar conteúdos relacionados. -->
+      <section id="translator-profile">
+        <h2>Translator Profile</h2>
+        <a href="#contact"><button>Contact Me</button></a>
+
+        <!-- ARTIGO: EDUCAÇÃO
+          Usamos <article> para um bloco de conteúdo que faz sentido por si só. -->
+        <article class="info-section">
+          <h3>Education</h3>
+          <ul>
+            <li>2003–2009 | Licenciate in Portuguese and Spanish Languages – Universidade Federal Fluminense – Niterói, Brazil</li>
+            <li>2006–2008 | Technical Diploma in Translation – Senac Rio – Rio de Janeiro, Brazil</li>
+            <li>2001–2003 | BA in Social Communication – Journalism (Partially Completed, Not Graduated)</li>
+          </ul>
+        </article>
+
+        <article class="info-section">
+          <h3>Areas of Specialization</h3>
+          <ul>
+            <li><strong>Expert:</strong> Medical, Life Sciences, Clinical and Medical Devices, Healthcare, Pharmaceutical Industry...</li>
+            <li><strong>Competent:</strong> Legal, Technical, Business, Hardware & Electronics, Patents, Accounting...</li>
+          </ul>
+        </article>
+
+        <article class="info-section">
+          <h3>CAT Tools</h3>
+          <ul>
+            <li>SDL Trados, Wordfast, MemoQ, Phrase, XTM, etc.</li>
+          </ul>
+        </article>
+
+        <article class="info-section">
+          <h3>Services</h3>
+          <ul>
+            <li>Translation, MTPE, LQA, Transcreation, AI Annotation, Prompting...</li>
+          </ul>
+        </article>
+      </section>
+
+      <!-- SEÇÃO: EXPERIÊNCIA PROFISSIONAL -->
+      <section id="experience">
+        <h2>Professional Experience</h2>
+
+        <details open>
+          <summary>
+            <!-- A tag <h3> dá mais importância semântica do que um <h4> ou <p> -->
+            <h3 class="section-heading">
+              <i class="fa-solid fa-briefcase"></i> Key Clients & Long-Term Collaborations
+            </h3>
+          </summary>
+          <div class="client-list">
+
+            <!-- Cada cliente vira um <article> com um título <h4>. Isso cria uma hierarquia clara:
+            <h2> (Título da Seção) -> <h3> (Título do Grupo) -> <h4> (Título do Item) -->
+            <article class="client-block">
+              <h4><small>2007–Present</small> | Brazilian Portuguese Independent Translator, Proofreader, Editor, Quality Manager, AI Annotator</h4>
+            </article>
+
+            <article class="client-block">
+              <h4><small>2019–Present</small> | Acclaro (formerly Jonckers)</h4>
+              <ul>
+                <li>Translation, Proofreading, MTPE across multiple verticals</li>
+              </ul>
+            </article>
+
+            <article class="client-block">
+              <h4><small>2018–Present</small> | Acolad (formerly Amplexor)</h4>
+              <ul>
+                <li>Translation, Proofreading, MTPE across multiple verticals</li>
+              </ul>
+            </article>
+
+            <article class="client-block">
+              <h4><small>2017–Present</small> | CQ Fluency</h4>
+              <ul>
+                <li>Translation, Editing, Proofreading, LQA, QC for Life & Sciences and Clinical & Healthcare Marketing, Clinical Protocols & Reports</li>
+              </ul>
+            </article>
+
+            <article class="client-block">
+              <h4><small>2015–Present</small> | RWS Moravia</h4>
+              <ul>
+                <li>Translation and transcreation in Marketing, Life Sciences, and Software</li>
+                <li>AI annotation and LLM writing, NLU training for LLM</li>
+              </ul>
+            </article>
+
+            <article class="client-block">
+              <h4><small>2013–Present</small> | TransPerfect</h4>
+              <ul>
+                <li>Translation, Editing, Proofreading, LQA for Clinical & Healthcare Marketing, Clinical Protocols & Reports</li>
+              </ul>
+            </article>
+
+            <article class="client-block">
+              <h4><small>2014–Present</small> | HCR Language Solutions</h4>
+              <ul>
+                <li>Translation, MTPE, and Transcreation across multiple verticals</li>
+              </ul>
+            </article>
+
+            <article class="client-block">
+              <h4><small>2012–Present</small> | Propio (formerly ULG Group)</h4>
+              <ul>
+                <li>Translation, Editing, MTPE, and LQA of Marketing & Healthcare Device content</li>
+              </ul>
+            </article>
+
+            <article class="client-block">
+              <h4><small>2012–Present</small> | L10N Studio</h4>
+              <ul>
+                <li>Translation and MTPE for clinical documentation, healthcare marketing, business and mechanical content</li>
+              </ul>
+            </article>
+
+          </div>
+        </details>
+
+        <details>
+          <summary>
+            <h3 class="section-heading">
+              <i class="fa-solid fa-laptop-code"></i> Freelance and In-House Translation Projects
+            </h3>
+          </summary>
+          <div class="client-list secondary">
+            <article class="client-block">
+              <h4><small>2007–2019</small> | Freelance and In-House Translation Projects</h4>
+              <ul class="subtopics">
+                <li><strong>Website Localization & IT:</strong> Compass Languages, Tradestar — IT document translation</li>
+                <li><strong>Publishing & Literary:</strong> Retorno 201 (Editora Gryphus), DVD inserts for Folha de S. Paulo, abridged classics (e.g. Robinson Crusoe)</li>
+                <li><strong>Corporate & Academic:</strong> Fundação Getúlio Vargas, Fagga|GL Exhibitions — fashion, textile, public security</li>
+                <li><strong>Medical & Scientific:</strong> Sociedade Brasileira de Cardiologia — 200,000+ words of clinical studies and reports</li>
+                <li><strong>Multidisciplinary:</strong> Viva Translations — LQA/QA and localization across domains:</li>
+                <ul>
+                  <li>Website, web services, software, and mobile apps</li>
+                  <li>IT content, e-commerce, medical devices, pharma, business, insurance</li>
+                  <li>Patents for smoking, IT, and pharmaceutical industries</li>
+                </ul>
+                <li><strong>In-House:</strong> Grupo Primacy Translations (2007–2008)</li>
+              </ul>
+            </article>
+          </div>
+        </details>
+      </section>
+
+      <!-- SEÇÃO: PERFIL DE FRONT-END LEARNER -->
+      <section id="frontend-profile">
+        <h2>Front-End Learner Profile</h2>
+
+        <article class="info-section">
+          <h3>Education</h3>
+          <ul>
+            <!-- Repetir a educação aqui pode ser opcional, mas mantive como no original -->
+            <li>2003–2009 | Licenciate in Portuguese and Spanish Languages – Universidade Federal Fluminense – Niterói, Brazil</li>
+            <li>2006–2008 | Technical Diploma in Translation – Senac Rio – Rio de Janeiro, Brazil</li>
+            <li>2001–2003 | BA in Social Communication – Journalism (Partially Completed, Not Graduated) – Faculdades Integradas Hélio Alonso – Rio de Janeiro, Brazil</li>
+          </ul>
+        </article>
+
+        <article class="info-section">
+          <h3>Currently Learning</h3>
+          <ul>
+            <li>HTML, CSS and JavaScript</li>
+            <li>Version Control with Git & GitHub</li>
+            <li>Web Project Structure and Best Practices</li>
+          </ul>
+        </article>
+
+        <article class="info-section">
+          <details>
+            <summary><h3>Mini Projects</h3></summary>
+            <ul>
+              <li><strong>Portfolio Website:</strong> This site!</li>
+              <li><strong>To-Do List App:</strong> A JavaScript project to manage tasks</li>
+              <li><strong>Responsive Layout:</strong> Practicing mobile-first design</li>
+            </ul>
+          </details>
+        </article>
+      </section>
+
+      <!-- SEÇÃO: CONTATO -->
+      <section id="contact">
+        <h2>Contact</h2>
+        <p><i class="fa-solid fa-envelope"></i> <a href="mailto:isalaxe@gmail.com">isalaxe@gmail.com</a></p>
+        <p><i class="fa-brands fa-linkedin"></i> <a href="https://linkedin.com/in/isalaxe" target="_blank" rel="noopener">linkedin.com/in/isalaxe</a></p>
+        <p><i class="fa-brands fa-github"></i> <a href="https://github.com/isalaxe" target="_blank" rel="noopener">github.com/isalaxe</a></p>
+        <a href="mailto:isalaxe@gmail.com"><button>📧 Get in Touch</button></a>
+      </section>
+
+    </div>
+  </main>
+
+  <!-- RODAPÉ (FOOTER)
+    A tag <footer> é para o final da página, geralmente com informações de copyright ou links secundários. -->
+  <footer class="page-footer">
+    <div class="container">
+      <p>&copy; 2025 - Isa Laxe</p>
+    </div>
+  </footer>
+
+  <!-- SEUS SCRIPTS DEVEM FICAR AQUI, NO FINAL DO BODY -->
+  <script>
+    const elements = document.querySelectorAll('section, .info-section, .client-block');
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('reveal-visible');
+        }
+      });
+    });
+
+    elements.forEach(el => {
+      el.classList.add('reveal');
+      observer.observe(el);
+    });
+  </script>
+  <script>
+    const toggleBtn = document.getElementById("toggle-theme");
+    const body = document.body;
+
+    if (localStorage.getItem("theme") === "light") {
+      body.classList.add("light-theme");
+    }
+
+    toggleBtn.addEventListener("click", () => {
+      body.classList.toggle("light-theme");
+
+      if (body.classList.contains("light-theme")) {
+        localStorage.setItem("theme", "light");
+      } else {
+        localStorage.setItem("theme", "dark");
+        // Corrigido: Precisamos remover a chave ou setar como 'dark'
+        // localStorage.removeItem("theme"); -> Uma opção
+        localStorage.setItem("theme", "dark"); // -> Melhor opção para consistência
+      }
+    });
+  </script>
+
+</body>
+</html>

@@ -1,0 +1,338 @@
+/* ======= COLOR VARIABLES ======= */
+:root {
+  --bg-color: #2b211c;
+  --text-color: #f3e9db;
+  --accent-blue: #6ca0dc;
+  --accent-green: #9fddb5;
+  --accent-rose: #c77b93;
+  --section-bg: #3a2d27;
+}
+
+/* ======= GENERAL STYLES ======= */
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  font-family: 'Segoe UI', sans-serif;
+  margin: 0;
+  padding: 0;
+  line-height: 1.6;
+  animation: fadeIn 1s ease-in;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.container {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 2rem;
+}
+
+header, section, footer {
+  background-color: var(--section-bg);
+  padding: 2rem;
+  margin-bottom: 2rem;
+  border-radius: 12px;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.4);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+header:hover, section:hover, .info-section:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 4px 16px rgba(0,0,0,0.3);
+}
+
+h1 {
+  color: var(--accent-rose);
+  font-size: 2.5rem;
+  margin-bottom: 0.3rem;
+}
+
+h2 {
+  color: var(--accent-blue);
+  font-size: 1.8rem;
+  margin-top: 2rem;
+  margin-bottom: 1rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  position: relative;
+  padding-bottom: 0.4rem;
+  text-shadow: 0 1px 3px rgba(0,0,0,0.5);
+}
+
+h2::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 60px;
+  height: 3px;
+  background: linear-gradient(90deg, var(--accent-blue), var(--accent-rose));
+  border-radius: 2px;
+}
+
+h3 {
+  color: var(--accent-green);
+  font-size: 1.2rem;
+  margin-top: 1.5rem;
+  font-weight: 600;
+  text-shadow: 0 1px 2px rgba(0,0,0,0.5);
+  border-left: 4px solid var(--accent-green);
+  padding-left: 0.5rem;
+}
+
+h4.section-heading {
+  font-size: 1.2rem;
+  font-weight: 600;
+  margin-top: 2rem;
+  margin-bottom: 1rem;
+  color: var(--accent-blue);
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+}
+
+h4.section-heading i {
+  color: var(--accent-rose);
+}
+
+/* ======= LINKS ======= */
+a {
+  color: var(--accent-blue);
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+/* ======= BUTTON ======= */
+button {
+  background: linear-gradient(135deg, var(--accent-rose), #842c4d);
+  color: #fff;
+  border: none;
+  padding: 0.8rem 1.6rem;
+  font-size: 1rem;
+  font-weight: 600;
+  border-radius: 12px;
+  cursor: pointer;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.25), 0 0 0 1px rgba(255,255,255,0.05) inset;
+  transition: all 0.3s ease;
+  letter-spacing: 0.5px;
+  backdrop-filter: blur(2px);
+}
+
+button:hover {
+  transform: translateY(-2px);
+  background: linear-gradient(135deg, #842c4d, var(--accent-rose));
+  box-shadow: 0 6px 12px rgba(0,0,0,0.3);
+}
+
+/* ======= CONTACT ======= */
+#contact p {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  margin-bottom: 1rem;
+}
+
+#contact i {
+  font-size: 1.4rem;
+  color: var(--accent-blue);
+  transition: transform 0.2s ease;
+}
+
+#contact a {
+  color: var(--text-color);
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+#contact a:hover {
+  color: var(--accent-blue);
+}
+
+#contact i:hover {
+  transform: scale(1.2);
+}
+
+.fa-envelope {
+  color: var(--accent-blue);
+}
+
+.fa-linkedin {
+  color: #0077b5;
+}
+
+.fa-github {
+  color: var(--accent-rose);
+}
+
+/* ======= CLIENT LIST ======= */
+.client-list {
+  margin-bottom: 2rem;
+}
+
+.client-block {
+  background-color: #2a1f1a;
+  border-radius: 10px;
+  padding: 1rem 1.5rem;
+  margin-bottom: 1rem;
+  box-shadow: 0 0 4px rgba(0, 0, 0, 0.3);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.client-block p {
+  font-weight: 500;
+  color: var(--text-color);
+  margin-bottom: 0.4rem;
+}
+
+.client-block ul {
+  padding-left: 1.5rem;
+  color: #d6ccc2;
+  font-size: 0.95rem;
+  line-height: 1.5;
+}
+
+.client-list.secondary {
+  background-color: #2f2622;
+  border-left: 3px solid #5b4637;
+  padding: 1.2rem 1.5rem;
+  border-radius: 10px;
+}
+
+.client-list.secondary .client-block {
+  background-color: transparent;
+  box-shadow: none;
+  padding: 0;
+}
+
+/* ======= UTILITY ======= */
+.subtopics {
+  list-style-type: '▸ ';
+  padding-left: 1.5rem;
+  margin-top: 0.6rem;
+  font-size: 0.95rem;
+  line-height: 1.6;
+}
+
+.info-section {
+  background-color: var(--section-bg);
+  padding: 1.5rem 2rem;
+  border-radius: 12px;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.25);
+  margin-bottom: 2rem;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* ======= COLLAPSIBLES ======= */
+details {
+  background-color: #2a1f1a;
+  padding: 1rem;
+  border-radius: 8px;
+  margin-bottom: 1rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+summary {
+  font-weight: bold;
+  color: var(--accent-blue);
+  font-size: 1.1rem;
+  margin-bottom: 0.5rem;
+}
+
+details[open] {
+  background-color: #3a2d27;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.3);
+}
+
+/* ======= SCROLL REVEAL ======= */
+.reveal {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: all 0.6s ease-out;
+}
+
+.reveal-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* ======= RESPONSIVE ======= */
+@media (max-width: 768px) {
+  .container {
+    padding: 1rem;
+  }
+
+  h1 {
+    font-size: 2rem;
+    text-align: center;
+  }
+
+  h2, h3, h4 {
+    font-size: 1.1rem;
+  }
+
+  button {
+    width: 100%;
+    padding: 1rem;
+    font-size: 1.1rem;
+  }
+
+  .client-block, .info-section, header, footer, section {
+    padding: 1rem;
+  }
+
+  #contact p {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.3rem;
+  }
+}
+/* ======= REFINO VISUAL DOS DETAILS ======= */
+details summary {
+  padding-left: 0.2rem;
+  text-shadow: 0 1px 2px rgba(0,0,0,0.5);
+  transition: color 0.3s ease;
+}
+
+details[open] summary {
+  color: var(--accent-green);
+}
+
+details ul {
+  margin-top: 0.8rem;
+  padding-left: 1.5rem;
+  list-style-type: disc;
+  color: var(--text-color);
+  font-size: 0.95rem;
+}
+/* ======= LIGHT THEME ======= */
+body.light-theme {
+  background-color: #f5f5f5;
+  color: #1c1c1c;
+}
+
+body.light-theme header,
+body.light-theme section,
+body.light-theme footer {
+  background-color: #ffffff;
+  color: #1c1c1c;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+}
+
+body.light-theme h1,
+body.light-theme h2,
+body.light-theme h3,
+body.light-theme h4 {
+  color: #2b211c;
+}
